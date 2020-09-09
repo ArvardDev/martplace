@@ -1,6 +1,6 @@
 $(function(){
 	
-
+	$('#create__search-list').styler();
 
 
 

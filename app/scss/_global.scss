@@ -6,6 +6,7 @@ html {
 *::before,
 *::after {
 	box-sizing: inherit;
+	outline: none;
 }
 
 a{
@@ -17,6 +18,15 @@ button{
 	cursor: pointer;
 }
 
+h1{
+	margin: 0;
+	padding: 0;
+}
+
+form{
+	margin: 0;
+	padding: 0;
+}
 ul, li{
 	margin: 0;
 	padding: 0;
@@ -27,6 +37,7 @@ body {
 	font-family: 'Quicksand';
 	font-weight: 400;
 	color: #555555;
+	font-size: 16px;
 }
 
 .container {

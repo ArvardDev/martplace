@@ -1,6 +1,6 @@
-@import 'global';
-@import 'vars';
 @import 'fonts';
+@import 'vars';
+@import 'global';
 
 // header start
 
@@ -23,6 +23,7 @@
 		color: #ffffff;
 		background-color: $btn;
 		border-radius: 20px;
+		border: 1px solid transparent;
 		padding: 9px 17px;
 		margin-left: auto;
 		margin-right: 50px;
@@ -30,7 +31,7 @@
 		&:hover {
 			background-color: #ffffff;
 			color: $btn;
-			box-shadow: 0 0 0 2px $btn;
+			border: 1px solid $btn;
 		}
 	}
 
@@ -40,10 +41,6 @@
 
 		img {
 			opacity: 0.3;
-
-			&:hover {
-				opacity: 1;
-			}
 		}
 
 		a+a {
@@ -51,8 +48,12 @@
 		}
 
 		&-item {
+			display: block;
 			position: relative;
 			color: #ffffff;
+			&:hover img{
+				opacity: 1;
+			}
 		}
 
 		&-span {
@@ -94,13 +95,19 @@
 
 	&__profile-img {
 		margin-right: 22px;
-
+		border-radius: 50%;
+		overflow: hidden;
+		a{
+			display: block;
+		}
 		img {
-			border-radius: 50%;
+			display: block;
 			width: 50px;
 			height: 50px;
 		}
-
+		&:hover{
+			box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+		}
 	}
 
 	&__profile {
@@ -161,39 +168,206 @@
 .header__search {
 	position: relative;
 	font-size: 15px;
-	&-input{
+
+	&-input {
 		height: 46px;
 		min-width: 360px;
 		padding: 14px 85px 14px 24px;
 		border: 1px solid #d9dfe5;
 		border-radius: 25px;
-		&::placeholder{
+
+		&::placeholder {
 			color: #898f96;
 		}
-		&:focus{
+
+		&:focus {
 			border: 1px solid $btn;
 		}
 	}
-	&-btn{
+
+	&-btn {
 		position: absolute;
 		background-color: $btn;
+		background-image: url(../images/icons/magnifier.svg);
+		background-repeat: no-repeat;
+		background-position: center;
 		width: 70px;
 		height: 46px;
-		border: none;
+		border: 1px solid transparent;
 		border-radius: 25px;
 		top: 0;
 		right: 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: 0.7s;
-		&:hover{
-			width: 90px;
-			box-shadow: 0 0 25px 1px $btn;
+
+		&:hover {
+			background-color: #ffffff;
+			color: $btn;
+			border: 1px solid $btn;
+			background-image: url(../images/icons/magnifier-blue.svg);
 		}
 	}
+}
+// header end
 
-		
+// start create
+
+.create {
+	background-color: #0c31bc;
+	color: #ffffff;
+	min-height: 725px;
+	text-align: center;
+	padding: 160px 30px 0;
+	margin-bottom: 65px;
+	&__inner{
+		position: relative;
+		min-height: 565px;
+	}
+	&__title{
+		font-size: 60px;
+		line-height: 70px;
+		font-weight: 400;
+		text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+		margin-bottom: 30px;
+		span{
+			font-weight: 700;
+		}
+	}
+	&__text{
+		font-size: 20px;
+		line-height: 26px;
+		font-weight: 500;
+		margin-bottom: 65px;
+	}
+	&__btn{
+		width: 190px;
+		height: 55px;
+		text-align: center;
+		border: 1px solid #ffffff;
+		padding: 19px;
+		margin: 0 15px;
+		color: #ffffff;
+		border-radius: 30px;
+		&:hover{
+			background-color: #ffffff;
+			color: $btn;
+		}
+	}
+	&__search{
+		position: absolute;
+		width: 100%;
+		bottom: -65px;
+		box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+		border-radius: 6px;
+	}
+	&__form{
+		position: relative;
+		display: flex;
+		padding: 40px;
+		border-radius: 6px;
+		background-color: #fff;
+	}
+	&__form-input{
+		display: block;
+		height: 55px;
+		border: 1px solid #dcdcdc;
+		border-radius: 5px 0 0 5px;
+		width: 100%;
+		max-width: 613px;
+		padding: 15px;
+		&:focus{
+			border-color: $btn;
+		}
+	}
+	.jq-selectbox__select {
+		border: 1px solid #dcdcdc;
+		background: #fff;
+		border-left: none;
+		box-shadow: none;
+		height: 55px;
+		width: 195px;
+		border-radius: 0 5px 5px 0;
+		padding: 10px 55px 0 10px;
+		font-family: 'Quicksand';
+		font-size: 16px;
+	}
+	.jq-selectbox__trigger{
+		border: none;
+		width: 55px;
+	}
+	.jq-selectbox__trigger-arrow{
+		background-image: url(../images/icons/chevron-down.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		border: none;
+		width: 14px;
+		height: 8px;
+		top: 20px;
+		right: 20px;
+	}
+	.jq-selectbox li.selected,
+	.jq-selectbox li:hover{
+		background-color: $btn;
+	}
+	.jq-selectbox__dropdown{
+		text-align: left;
+		font-family: 'Quicksand';
+		font-size: 16px;
+	}
+
+	&__search-btn{
+		width: 223px;
+		height: 55px;
+		background-color: $btn;
+		color: #ffffff;
+		border: 1px solid transparent;
+		border-radius: 6px;
+		margin-left: 30px;
+		&:hover{
+			background-color: #ffffff;
+			color: $btn;
+			border: 1px solid $btn;
+		}
+	}
+	
+	&__form::before,
+	&__form::after{
+		content: '';
+		position: absolute;
+		height: 50px;
+		border-radius: 6px;
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+	&__form::before{
+		top: -15px;
+		left: 15px;
+		right: 15px;
+	}
+	&__form::after{
+		top: -30px;
+		left: 30px;
+		right: 30px;
+	}
 }
 
-// header end
+
+
+.Rectangle_238 {
+	border-radius: 6px;
+	background-color: #ffffff;
+	box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+  }
+  .Create_Your_Own_Digital_Product_Marketplace {
+	font-size: 60px;
+	font-family: "Quicksand";
+	color: rgb(243, 243, 248);
+	line-height: 1.167;
+	text-align: center;
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+	position: absolute;
+	left: 551.938px;
+	top: 422.491px;
+	z-index: 713;
+  }
+  
