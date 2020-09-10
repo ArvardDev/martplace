@@ -2,6 +2,10 @@
 @import 'vars';
 @import 'global';
 
+html {
+	min-height: 3000px;
+}
+
 // header start
 
 .header {
@@ -51,7 +55,8 @@
 			display: block;
 			position: relative;
 			color: #ffffff;
-			&:hover img{
+
+			&:hover img {
 				opacity: 1;
 			}
 		}
@@ -97,15 +102,18 @@
 		margin-right: 22px;
 		border-radius: 50%;
 		overflow: hidden;
-		a{
+
+		a {
 			display: block;
 		}
+
 		img {
 			display: block;
 			width: 50px;
 			height: 50px;
 		}
-		&:hover{
+
+		&:hover {
 			box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
 		}
 	}
@@ -209,38 +217,44 @@
 		}
 	}
 }
+
 // header end
 
 // start create
 
 .create {
-	background-color: #0c31bc;
+	background-image: linear-gradient(to right, #2d51d1, #0c31bc);
 	color: #ffffff;
 	min-height: 725px;
 	text-align: center;
 	padding: 160px 30px 0;
 	margin-bottom: 65px;
-	&__inner{
+
+	&__inner {
 		position: relative;
 		min-height: 565px;
 	}
-	&__title{
+
+	&__title {
 		font-size: 60px;
 		line-height: 70px;
 		font-weight: 400;
 		text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 		margin-bottom: 30px;
-		span{
+
+		span {
 			font-weight: 700;
 		}
 	}
-	&__text{
+
+	&__text {
 		font-size: 20px;
 		line-height: 26px;
 		font-weight: 500;
 		margin-bottom: 65px;
 	}
-	&__btn{
+
+	&__btn {
 		width: 190px;
 		height: 55px;
 		text-align: center;
@@ -249,26 +263,30 @@
 		margin: 0 15px;
 		color: #ffffff;
 		border-radius: 30px;
-		&:hover{
+
+		&:hover {
 			background-color: #ffffff;
 			color: $btn;
 		}
 	}
-	&__search{
+
+	&__search {
 		position: absolute;
 		width: 100%;
 		bottom: -65px;
 		box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
 		border-radius: 6px;
 	}
-	&__form{
+
+	&__form {
 		position: relative;
 		display: flex;
 		padding: 40px;
 		border-radius: 6px;
 		background-color: #fff;
 	}
-	&__form-input{
+
+	&__form-input {
 		display: block;
 		height: 55px;
 		border: 1px solid #dcdcdc;
@@ -276,10 +294,12 @@
 		width: 100%;
 		max-width: 613px;
 		padding: 15px;
-		&:focus{
+
+		&:focus {
 			border-color: $btn;
 		}
 	}
+
 	.jq-selectbox__select {
 		border: 1px solid #dcdcdc;
 		background: #fff;
@@ -292,11 +312,13 @@
 		font-family: 'Quicksand';
 		font-size: 16px;
 	}
-	.jq-selectbox__trigger{
+
+	.jq-selectbox__trigger {
 		border: none;
 		width: 55px;
 	}
-	.jq-selectbox__trigger-arrow{
+
+	.jq-selectbox__trigger-arrow {
 		background-image: url(../images/icons/chevron-down.svg);
 		background-repeat: no-repeat;
 		background-position: center;
@@ -306,17 +328,19 @@
 		top: 20px;
 		right: 20px;
 	}
+
 	.jq-selectbox li.selected,
-	.jq-selectbox li:hover{
+	.jq-selectbox li:hover {
 		background-color: $btn;
 	}
-	.jq-selectbox__dropdown{
+
+	.jq-selectbox__dropdown {
 		text-align: left;
 		font-family: 'Quicksand';
 		font-size: 16px;
 	}
 
-	&__search-btn{
+	&__search-btn {
 		width: 223px;
 		height: 55px;
 		background-color: $btn;
@@ -324,50 +348,75 @@
 		border: 1px solid transparent;
 		border-radius: 6px;
 		margin-left: 30px;
-		&:hover{
+
+		&:hover {
 			background-color: #ffffff;
 			color: $btn;
 			border: 1px solid $btn;
 		}
 	}
-	
+
 	&__form::before,
-	&__form::after{
+	&__form::after {
 		content: '';
 		position: absolute;
 		height: 50px;
 		border-radius: 6px;
 		background-color: rgba(255, 255, 255, 0.5);
 	}
-	&__form::before{
+
+	&__form::before {
 		top: -15px;
 		left: 15px;
 		right: 15px;
 	}
-	&__form::after{
+
+	&__form::after {
 		top: -30px;
 		left: 30px;
 		right: 30px;
 	}
 }
 
+// end create 
 
+// start pluses
 
-.Rectangle_238 {
-	border-radius: 6px;
-	background-color: #ffffff;
-	box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
-  }
-  .Create_Your_Own_Digital_Product_Marketplace {
-	font-size: 60px;
-	font-family: "Quicksand";
-	color: rgb(243, 243, 248);
-	line-height: 1.167;
-	text-align: center;
-	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-	position: absolute;
-	left: 551.938px;
-	top: 422.491px;
-	z-index: 713;
-  }
-  
+.pluses {
+	padding: 120px 0;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		text-align: center;
+		max-width: 360px;
+		padding: 40px 34px;
+		border-radius: 4px;
+
+		&:hover {
+			box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+		  }
+		  
+
+		&-img {
+			height: 120px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 30px;
+		}
+
+		&-title {
+			text-align: center;
+			margin-bottom: 25px;
+		}
+
+		&-text{
+			line-height: 30px;
+		}
+	}
+
+}
