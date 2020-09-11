@@ -1,24 +1,30 @@
 $(function () {
 
 	$('#create__search-list').styler();
+	$('#product__filter').styler();
 
 
-
-
-
-	// Плавный скролл по странице
-	$(".header__nav, .header__content, .action__inner, .back-to-top__link").on("click", "a", function (event) {
-		//отменяем стандартную обработку нажатия по ссылке
-		event.preventDefault();
-		//забираем идентификатор блока с атрибута href
-		var id = $(this).attr('href'),
-			//узнаем высоту от начала страницы до блока на который ссылается якорь
-			top = $(id).offset().top;
-		//анимируем переход на расстояние - top за 1500 мс
-		$('body,html').animate({
-			scrollTop: top
-		}, 1500);
+	$('.products__filter-btn').on('click', function(){
+			$('.products__filter-list').slideToggle();
 	});
+
+	$('.product__item-stars').rateYo({
+		rating: 3.5,
+		// spacing: "2px",
+		maxValue: 5,
+		numStars: 5,
+		starWidth: "15px",
+		readOnly: true,
+		normalFill: 'transparent',
+		ratedFill: '#ffc000',
+
+		starSvg: '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>'
+	})
+
+	var mixer = mixitup('.products__items');
+
+
+
 
 	// Кнопка Наверх
 	function backToTop() {
