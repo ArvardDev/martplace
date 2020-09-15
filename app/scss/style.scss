@@ -3,7 +3,7 @@
 @import 'global';
 
 html {
-	min-height: 6000px;
+	min-height: 7000px;
 }
 
 // header start
@@ -1231,3 +1231,137 @@ html {
 
 
 }
+
+// end counters
+
+// start choose
+
+.choose {
+	padding: 100px 0 120px;
+	text-align: center;
+
+	&__title {
+		margin-bottom: 20px;
+		span {
+			color: $btn
+		}
+	}
+
+	&__text {
+		max-width: 680px;
+		margin: 0 auto 60px;
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 100%;	  
+	}
+
+	&__item {
+		max-width: 360px;
+		max-height: 375px;
+		border-radius: 4px;
+		box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);	
+		padding: 55px 30px;
+		margin-bottom: 30px;
+		position: relative;
+
+		&-img {
+			margin-bottom: 50px;
+			svg {
+				width: 55px;
+				height: auto;
+			}
+		}
+
+		&:nth-child(n)::before {
+			position: absolute;
+			color: #5c87f8;
+			font-size: 48px;
+			top: 20px;
+			left: 20px;
+			opacity: 0.2;
+			font-weight: 300;
+		}
+
+		&:nth-child(1){
+			svg {
+				path {
+					fill: #0674ec;
+				}
+			}
+			&::before {
+				content: '01';
+			}
+		}
+		&:nth-child(2){
+			svg {
+				path {
+					fill: #7f4ec2;
+				}
+			}
+			&::before {
+				content: '02';
+			}
+		}
+		&:nth-child(3){
+			svg {
+				path {
+					fill: #77de51;
+				}
+			}
+			&::before {
+				content: '03';
+			}
+		}
+		&:nth-child(4){
+			svg {
+				path {
+					fill: #feb71d;
+				}
+			}
+			&::before {
+				content: '04';
+
+			}
+		}
+		&:nth-child(5){
+			svg {
+				path {
+					fill: #58c9e9;
+				}
+			}
+			&::before {
+				content: '05';
+
+			}
+		}
+		&:nth-child(6){
+			svg {
+				path {
+					fill: #ff6a6d;
+				}
+			}
+			&::before {
+				content: '06';
+				position: absolute;
+
+			}
+		}
+
+		&-title {
+			font-size: 24px;
+			line-height: 24px;
+			color: #000000;
+			margin-bottom: 25px;
+		}
+
+		&-text {
+			line-height: 30px;
+		}
+	}
+}
+
+// end choose
