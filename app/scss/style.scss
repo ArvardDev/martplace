@@ -3,7 +3,7 @@
 @import 'global';
 
 html {
-	min-height: 7000px;
+	min-height: 8000px;
 }
 
 // header start
@@ -387,10 +387,6 @@ html {
 
 // end create 
 
-.page-section {
-	padding: 120px 0;
-}
-
 // start advantages
 
 .advantages {
@@ -716,6 +712,7 @@ html {
 	&__item-stars {
 		margin-left: auto;
 		width: auto !important;
+
 		svg {
 			width: 20px;
 			height: 20px;
@@ -1132,7 +1129,7 @@ html {
 	& .products__item {
 		margin-bottom: 0;
 	}
-	
+
 	&__item-stars {
 		margin-left: auto;
 		height: 15px;
@@ -1162,56 +1159,65 @@ html {
 	}
 
 	&__item {
-			// text-align: center;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+		// text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
 		&-img {
 			margin-bottom: 40px;
+
 			svg {
 				width: 48px;
 				height: 48px;
 			}
 		}
+
 		&-briefcase {
 			svg {
 				path {
 					fill: #feb71d;
 				}
 			}
+
 			.counters__item-count {
-				color:  #feb71d;
+				color: #feb71d;
 			}
 		}
+
 		&-cloud {
 			svg {
 				path {
 					fill: #58c9e9;
 				}
 			}
+
 			.counters__item-count {
-				color:  #58c9e9;
+				color: #58c9e9;
 			}
 		}
+
 		&-smile {
 			svg {
 				path {
 					fill: #77de51;
 				}
 			}
+
 			.counters__item-count {
-				color:  #77de51;
+				color: #77de51;
 			}
 		}
+
 		&-users {
 			svg {
 				path {
 					fill: #ff6a6d;
 				}
 			}
+
 			.counters__item-count {
-				color:  #ff6a6d;
+				color: #ff6a6d;
 			}
 		}
 
@@ -1242,6 +1248,7 @@ html {
 
 	&__title {
 		margin-bottom: 20px;
+
 		span {
 			color: $btn
 		}
@@ -1256,20 +1263,21 @@ html {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		width: 100%;	  
+		width: 100%;
 	}
 
 	&__item {
 		max-width: 360px;
 		max-height: 375px;
 		border-radius: 4px;
-		box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);	
+		box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
 		padding: 55px 30px;
 		margin-bottom: 30px;
 		position: relative;
 
 		&-img {
 			margin-bottom: 50px;
+
 			svg {
 				width: 55px;
 				height: auto;
@@ -1286,64 +1294,75 @@ html {
 			font-weight: 300;
 		}
 
-		&:nth-child(1){
+		&:nth-child(1) {
 			svg {
 				path {
 					fill: #0674ec;
 				}
 			}
+
 			&::before {
 				content: '01';
 			}
 		}
-		&:nth-child(2){
+
+		&:nth-child(2) {
 			svg {
 				path {
 					fill: #7f4ec2;
 				}
 			}
+
 			&::before {
 				content: '02';
 			}
 		}
-		&:nth-child(3){
+
+		&:nth-child(3) {
 			svg {
 				path {
 					fill: #77de51;
 				}
 			}
+
 			&::before {
 				content: '03';
 			}
 		}
-		&:nth-child(4){
+
+		&:nth-child(4) {
 			svg {
 				path {
 					fill: #feb71d;
 				}
 			}
+
 			&::before {
 				content: '04';
 
 			}
 		}
-		&:nth-child(5){
+
+		&:nth-child(5) {
 			svg {
 				path {
 					fill: #58c9e9;
 				}
 			}
+
 			&::before {
 				content: '05';
 
 			}
 		}
-		&:nth-child(6){
+
+		&:nth-child(6) {
 			svg {
 				path {
 					fill: #ff6a6d;
 				}
 			}
+
 			&::before {
 				content: '06';
 				position: absolute;
@@ -1360,8 +1379,90 @@ html {
 
 		&-text {
 			line-height: 30px;
+			overflow: hidden;
+			max-height: 120px;
 		}
 	}
 }
 
 // end choose
+
+// start sellbuy
+
+.sellbuy {
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1920px;
+	}
+
+	&__item {
+		padding: 100px 0;
+		max-width: 50%;
+		width: 100%;
+		min-height: 561px;
+		background-image: url(../images/sellbuy/item-bg.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		text-align: center;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: rgba(0, 0, 0, .3);
+			z-index: 2;
+			transition: 0.5s;
+		}
+
+		&:hover::before {
+			background: rgba(0, 0, 0, 0);
+		}
+
+		&-inner {
+			position: relative;
+			z-index: 3;
+		}
+
+		&-img {
+			margin-bottom: 45px;
+		}
+
+		&-title {
+			color: #ffffff;
+			margin-bottom: 25px;
+		}
+
+		&-text {
+			color: #ffffff;
+			line-height: 30px;
+			max-width: 590px;
+			margin: 0 auto 45px;
+		}
+
+		
+	&-btn {
+		width: 190px;
+		height: 55px;
+		// text-align: center;
+		border: 1px solid #ffffff;
+		background-color: transparent;
+		padding: 19px;
+		color: #ffffff;
+		border-radius: 30px;
+		transition: 0.3s;
+		
+		&:hover {
+			background-color: #ffffff;
+			color: $btn;
+		}
+	}
+	}
+}
+
+// end sellbuy
