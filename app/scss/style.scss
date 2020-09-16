@@ -3,7 +3,7 @@
 @import 'global';
 
 html {
-	min-height: 8000px;
+	min-height: 9000px;
 }
 
 // header start
@@ -43,7 +43,7 @@ html {
 		display: flex;
 		align-items: center;
 
-		img {
+		&-img {
 			opacity: 0.3;
 		}
 
@@ -92,22 +92,20 @@ html {
 		margin-left: 45px;
 		display: flex;
 		align-items: center;
-
-		a {
-			font-size: 16px;
-		}
 	}
 
-	&__profile-img {
+	&__profile-image {
+		width: 30px;
+		height: 30px;
 		margin-right: 22px;
 		border-radius: 50%;
 		overflow: hidden;
 
-		a {
+		&-link {
 			display: block;
 		}
 
-		img {
+		&-img {
 			display: block;
 			width: 50px;
 			height: 50px;
@@ -406,11 +404,11 @@ html {
 			box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
 		}
 
-		img {
+		&-img {
 			max-width: 100%;
 		}
 
-		&-img {
+		&-image {
 			height: 120px;
 			display: flex;
 			justify-content: center;
@@ -588,10 +586,11 @@ html {
 		}
 	}
 
-	&__author-img {
-		& img {
+	&__author-image {
+		margin-right: 9px;
+
+		&-img {
 			border-radius: 50%;
-			margin-right: 9px;
 		}
 	}
 
@@ -915,12 +914,12 @@ html {
 		}
 	}
 
-	&__item-img {
+	&__item-image {
 		width: 28px;
 		height: 28px;
 		margin-right: 6px;
 
-		img {
+		&-img {
 			width: 100%;
 			height: 100%;
 		}
@@ -1151,7 +1150,7 @@ html {
 		flex-direction: column;
 		align-items: center;
 
-		&-img {
+		&-image {
 			margin-bottom: 40px;
 
 			svg {
@@ -1254,7 +1253,7 @@ html {
 		margin-bottom: 30px;
 		position: relative;
 
-		&-img {
+		&-image {
 			margin-bottom: 50px;
 
 			svg {
@@ -1408,7 +1407,7 @@ html {
 			z-index: 3;
 		}
 
-		&-img {
+		&-image {
 			margin-bottom: 45px;
 		}
 
@@ -1424,24 +1423,137 @@ html {
 			margin: 0 auto 45px;
 		}
 
-		
-	&-btn {
-		width: 190px;
-		height: 55px;
-		// text-align: center;
-		border: 1px solid #ffffff;
-		background-color: transparent;
-		padding: 19px;
-		color: #ffffff;
-		border-radius: 30px;
-		transition: 0.3s;
-		
-		&:hover {
-			background-color: #ffffff;
-			color: $btn;
+
+		&-btn {
+			width: 190px;
+			height: 55px;
+			// text-align: center;
+			border: 1px solid #ffffff;
+			background-color: transparent;
+			padding: 19px;
+			color: #ffffff;
+			border-radius: 30px;
+			transition: 0.3s;
+
+			&:hover {
+				background-color: #ffffff;
+				color: $btn;
+			}
 		}
-	}
 	}
 }
 
 // end sellbuy
+
+// start reviews
+
+.reviews {
+	&__inner {
+		text-align: center;
+	}
+
+	&__text {
+		max-width: 680px;
+		line-height: 30px;
+		margin: 0 auto 50px;
+	}
+
+	&__slider {
+		margin-bottom: 60px;
+
+		.slick-list {
+			margin: -30px -30px;
+		}
+
+		.slick-slide {
+			padding: 30px 30px;
+			// margin-right: 15px;
+			& + .slick-slide {
+				margin-left: 15px;
+			}
+		}
+	}
+
+	&__item {
+		text-align: left;
+		max-width: 555px;
+		max-height: 315px;
+		border-left: 2px solid $btn;
+		padding: 50px 42px 40px 38px;
+		border-radius: 4px;
+		box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.08);
+		background-color: rgb(255, 255, 255);
+
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 58px;
+			height: 51px;
+			background-image: url(../images/icons/bubble.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			opacity: 0.2;
+			top: 50px;
+			right: 42px;
+		}
+
+		&-top {
+			display: flex;
+			align-items: center;
+			margin-bottom: 25px;
+		}
+
+		&-image {
+			margin-right: 18px;
+		}
+
+		&-img {
+			width: 80px;
+			height: 80px;
+		}
+
+		&-text {
+			line-height: 30px;
+			max-height: 120px;
+			overflow: hidden;
+		}
+	}
+
+	&__profile-name {
+		font-size: 20px;
+		line-height: 32px;
+		
+		a {
+			color: #000000;
+
+			&:hover {
+				color: $link;
+			}
+		}
+	}
+
+	&__btn {
+		text-align: center;
+		width: 190px;
+		height: 55px;
+		text-align: center;
+		border: 1px solid #ffffff;
+		padding: 19px;
+		margin: 0 15px;
+		color: #ffffff;
+		background-color: $btn;
+		border-radius: 30px;
+		transition: 0.3s;
+
+		&:hover {
+			background-color: #ffffff;
+			border-color: $btn;
+			color: $btn;
+		}
+	}
+}
+
+// end reviews
