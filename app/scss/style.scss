@@ -1748,3 +1748,44 @@ html {
 }
 
 // end news
+
+// start guarantee
+
+.guarantee {
+	
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	&__item {
+		padding: 60px;
+		min-height: 300px;
+		width: 50%;
+		text-align: center;
+		
+		&:first-child {
+			border-right: 1px solid #e8eaf3;
+		}
+	}
+
+	&__img {
+		margin-bottom: 30px;
+	}
+
+	&__title {
+		font-weight: 400;
+		&-link {
+			color: $btn;
+			padding-bottom: 6px;
+			border-radius: 8px;
+			border-bottom: 1px solid transparent;
+
+			&:hover {
+				border-bottom: 1px solid $btn;
+			}
+		}
+	}
+}
+
+// end guarantee
