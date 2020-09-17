@@ -256,23 +256,6 @@ html {
 		margin-bottom: 65px;
 	}
 
-	&__btn {
-		width: 190px;
-		height: 55px;
-		text-align: center;
-		border: 1px solid #ffffff;
-		padding: 19px;
-		margin: 0 15px;
-		color: #ffffff;
-		border-radius: 30px;
-		transition: 0.3s;
-
-		&:hover {
-			background-color: #ffffff;
-			color: $btn;
-		}
-	}
-
 	&__search {
 		position: absolute;
 		width: 100%;
@@ -1037,26 +1020,8 @@ html {
 	}
 
 	&__btn {
-		text-align: center;
-
-		&-link {
-			width: 190px;
-			height: 55px;
-			text-align: center;
-			border: 1px solid #ffffff;
-			padding: 19px;
-			margin: 0 15px;
-			color: #ffffff;
-			background-color: $btn;
-			border-radius: 30px;
-			transition: 0.3s;
-
-			&:hover {
-				background-color: #ffffff;
-				border-color: $btn;
-				color: $btn;
-			}
-		}
+		display: block;
+		margin: 0 auto;
 	}
 }
 
@@ -1422,24 +1387,6 @@ html {
 			max-width: 590px;
 			margin: 0 auto 45px;
 		}
-
-
-		&-btn {
-			width: 190px;
-			height: 55px;
-			// text-align: center;
-			border: 1px solid #ffffff;
-			background-color: transparent;
-			padding: 19px;
-			color: #ffffff;
-			border-radius: 30px;
-			transition: 0.3s;
-
-			&:hover {
-				background-color: #ffffff;
-				color: $btn;
-			}
-		}
 	}
 }
 
@@ -1537,23 +1484,8 @@ html {
 	}
 
 	&__btn {
-		text-align: center;
-		width: 190px;
-		height: 55px;
-		text-align: center;
-		border: 1px solid #ffffff;
-		padding: 19px;
-		margin: 0 15px;
-		color: #ffffff;
-		background-color: $btn;
-		border-radius: 30px;
-		transition: 0.3s;
-
-		&:hover {
-			background-color: #ffffff;
-			border-color: $btn;
-			color: $btn;
-		}
+		display: block;
+		margin: 0 auto;
 	}
 }
 
@@ -1583,7 +1515,8 @@ html {
 		max-width: 361px;
 		max-height: 475px;
 		box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
-		&:hover .news__item-image::before{
+
+		&:hover .news__item-image::before {
 			opacity: 0;
 		}
 	}
@@ -1709,7 +1642,7 @@ html {
 	&__comments {
 		display: inline-block;
 		position: relative;
-		
+
 		&-link {
 			color: #7e7e7e;
 
@@ -1743,7 +1676,7 @@ html {
 			top: 10px;
 		}
 	}
- 
+
 
 }
 
@@ -1752,18 +1685,18 @@ html {
 // start guarantee
 
 .guarantee {
-	
+
 	&__inner {
 		display: flex;
 		justify-content: space-between;
 	}
-	
+
 	&__item {
 		padding: 60px;
 		min-height: 300px;
 		width: 50%;
 		text-align: center;
-		
+
 		&:first-child {
 			border-right: 1px solid #e8eaf3;
 		}
@@ -1775,6 +1708,7 @@ html {
 
 	&__title {
 		font-weight: 400;
+
 		&-link {
 			color: $btn;
 			padding-bottom: 6px;
@@ -1789,3 +1723,30 @@ html {
 }
 
 // end guarantee
+
+// start join-us
+
+.join-us {
+	background-color: #151a20;
+	background-image: linear-gradient(to left, #0d3ef2 0%, #7221a0 100%);
+
+	&__inner {
+		min-height: 400px;
+		text-align: center;
+		padding: 100px;
+	}
+
+	&__title {
+		color: #ffffff;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		color: #e7e7e7;
+		font-size: 18px;
+		line-height: 18px;
+		margin-bottom: 50px;
+	}
+}
+
+// end join-us

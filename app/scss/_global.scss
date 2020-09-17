@@ -101,3 +101,40 @@ body {
 	margin: 0 auto;
 	padding: 0 15px;
 }
+
+.globbtn {
+	width: 190px;
+	height: 55px;
+	text-align: center;
+	padding: 16px;
+	margin: 0 15px;
+	color: #ffffff;
+	background-color: transparent;
+	border-radius: 28px;
+	transition: 0.3s;
+	border: 1px solid #ffffff;
+
+	&:hover {
+		background-color: #ffffff;
+		color: $btn;
+	}
+}
+
+.globbtn--white {
+	background-color: #ffffff;
+	color: $btn;
+
+	&:hover {
+		background-color: transparent;
+		color: #ffffff;
+	}
+}
+
+.globbtn--blue {
+	border: 1px solid #ffffff;
+	background-color: $btn;
+
+	&:hover {
+		border-color: $btn;
+	}
+}
