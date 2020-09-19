@@ -9,6 +9,47 @@ html {
 	outline: none;
 }
 
+html,
+body {
+	height: 100%;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+body {
+	font-family: 'Quicksand';
+	font-weight: 400;
+	color: #555555;
+	font-size: 16px;
+}
+
+
+.page-section {
+	padding: 120px 0;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.page-content {
+	background-color: $bg;
+}
+
 a {
 	display: inline-block;
 	text-decoration: none;
@@ -72,6 +113,60 @@ h6 {
 	}
 }
 
+.rate-stars {
+	margin-left: auto;
+	height: auto;
+
+	&.jq-ry-container {
+		background-image: url(../images/icons/star.svg);
+		background-size: contain;
+		padding: 0;
+	}
+}
+
+.breadcrumbs {
+	&__inner {
+		font-size: 15px;
+		line-height: 15px;
+		text-align: center;
+		color: #bfcad7;
+		padding: 37px 0 30px;
+	}
+
+	&__list {
+		li {
+			display: inline-block;
+
+			&+li {
+				padding-left: 25px;
+				position: relative;
+
+				&::before {
+					content: '/';
+					position: absolute;
+					left: 8px;
+					color: #848acc;
+				}
+			}
+
+			a {
+				color: #848acc;
+
+				&:hover {
+					color: #fff;
+				}
+			}
+			
+			&:last-child {
+				a,
+				span {
+					color: #fff;
+					}
+			}
+		}
+	}
+}
+
 form {
 	margin: 0;
 	padding: 0;
@@ -82,24 +177,6 @@ li {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-}
-
-body {
-	font-family: 'Quicksand';
-	font-weight: 400;
-	color: #555555;
-	font-size: 16px;
-}
-
-
-.page-section {
-	padding: 120px 0;
-}
-
-.container {
-	max-width: 1170px;
-	margin: 0 auto;
-	padding: 0 15px;
 }
 
 .globbtn {
