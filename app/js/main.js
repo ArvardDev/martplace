@@ -1,5 +1,21 @@
 $(function () {
 
+	$('.header__link-home').on('click', function(){
+		$('.header__list-home').slideToggle("slow");
+	});
+	$('.header__link-products').on('click', function(){
+		$('.header__list-products').slideToggle("slow");
+	});
+	$('.header__link-wordpress').on('click', function(){
+		$('.header__list-wordpress').slideToggle("slow");
+	});
+	$('.header__link-features').on('click', function(){
+		$('.header__list-features').slideToggle("slow");
+	});
+	$('.header__link-pages').on('click', function(){
+		$('.header__pages-wrap').slideToggle("slow");
+	});
+
 	$('#create__search-list').styler();
 	$('#product__filter').styler();
 	$('#products-page__sort-list').styler();
