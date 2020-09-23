@@ -20,7 +20,7 @@
 			<div class="header__top">
 				<div class="container">
 					<div class="header__top-inner">
-						<div class="header__logo logo">
+						<div class="header__logo logo header__logged-off">
 							<a href="#">
 								<img class="header__logo-img" src="images/logo.png" alt="logo">
 							</a>
@@ -30,10 +30,10 @@
 							<li><a class="header__link" href="#">Forums</a></li>
 							<li><a class="header__link" href="#">Help</a></li>
 						</ul>
-						<a class="header__btn header__logged-on" href="#">
+						<a class="header__btn header__logged-off" href="#">
 							Become a Seller
 						</a>
-						<div class="header__links header__logged-on">
+						<div class="header__links header__logged-off">
 							<div class="header__alert-box">
 								<a class="header__alert header__links-item" href="#">
 									<img class="header__alert-img header__links-img" src="images/icons/alarm.svg" alt="alert">
@@ -100,7 +100,7 @@
 								</div>
 							</div>
 							
-							<div class="header__message-box">
+							<div class="header__messages-box">
 								<a class="header__messages header__links-item" href="#">
 									<img class="header__messages-img header__links-img" src="images/icons/envelope.svg"
 										alt="messages">
@@ -252,7 +252,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="header__profile-box header__logged-on">
+						<div class="header__profile-box header__logged-off">
 							<div class="header__profile-image">
 								<a class="header__profile-link" href="#">
 									<img class="header__profile-img" src="images/superuser-3.png" alt="my_profile-photo">
@@ -304,14 +304,23 @@
 							</ul>
 						</div>
 						</div>
-						<a href="#" class="header__btn header__btn-login header__logged-on">Login</a>
-						<a href="#" class="header__btn header__btn-signup header__logged-on">Sign Up</a>
+						<div class="header__profile-btn lnr lnr-user header__logged-off"></div>
+						<a href="#" class="header__btn header__btn-login header__logged-off">Login</a>
+						<a href="#" class="header__btn header__btn-signup header__logged-off">Sign Up</a>
 					</div>
 				</div>
 			</div>
 			<div class="header__bottom">
 				<div class="container">
 					<div class="header__bottom-inner">
+						<div class="header__menu-wrap">
+							<div class="header__menu-btn">
+								<input type="checkbox" />
+								<span id="span1"></span>
+								<span id="span2"></span>
+								<span id="span3">menu</span>
+							</div>
+						</div>
 						<nav class="header__menu">
 							<ul class="header__menu-list">
 								<li class="header__link-box">
@@ -364,7 +373,7 @@
 										<li><a href="#">Home Three Product</a></li>
 									</ul>
 								</li>
-								<li class="header__link-box">
+								<li class="header__link-box header__link-box--pages">
 									<a class="header__menu-link header__link-pages" href="#">PAGES</a>
 									<div class="header__pages-wrap">
 										<ul class="header__link-list header__list-pages">
@@ -373,7 +382,7 @@
 													<div class="main-pages__title drop__list-title">
 														MartPlace Pages
 													</div>
-													<ul class="">
+													<ul class="main-pages__list">
 														<li><a href="#">Home Page One</a></li>
 														<li><a href="#">Home Page Two</a></li>
 														<li><a href="#">Home Page Three</a></li>
@@ -404,7 +413,7 @@
 													<div class="dashboard__title drop__list-title">
 														Dashboard
 													</div>
-													<ul class="">
+													<ul class="dashboard__list">
 														<li><a href="#">Dashboard</a></li>
 														<li><a href="#">Account Settings</a></li>
 														<li><a href="#">Author Purchases</a></li>
@@ -424,7 +433,7 @@
 													<div class="other-pages__title drop__list-title">
 														Other Pages
 													</div>
-													<ul>
+													<ul class="other-pages__list">
 														<li><a href="#">Notifications</a></li>
 														<li><a href="#">Message Inbox</a></li>
 														<li><a href="#">Message Compose</a></li>

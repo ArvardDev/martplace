@@ -1,5 +1,12 @@
 $(function () {
 
+	$('.header__menu-btn').on('click', function(){
+		$('.header__menu-list').slideToggle("slow");
+	});
+	$('.header__profile-btn').on('click', function(){
+		$('.header__profile-box').toggleClass('active');
+	});
+
 	$('.header__link-home').on('click', function(){
 		$('.header__list-home').slideToggle("slow");
 	});
@@ -13,7 +20,43 @@ $(function () {
 		$('.header__list-features').slideToggle("slow");
 	});
 	$('.header__link-pages').on('click', function(){
-		$('.header__pages-wrap').slideToggle("slow");
+		$('.header__pages-wrap').slideToggle();
+	});
+
+	$(function(){
+		if ( $(window).width() < 900 ) {
+			$('.main-pages__title').on('click', function(){
+				$('.main-pages__list').slideToggle();
+			})
+		}
+	  });
+	$(function(){
+		if ( $(window).width() < 900 ) {
+			$('.dashboard__title').on('click', function(){
+				$('.dashboard__list').slideToggle();
+			})
+		}
+	  });
+	$(function(){
+		if ( $(window).width() < 900 ) {
+			$('.other-pages__title').on('click', function(){
+				$('.other-pages__list').slideToggle();
+			})
+		}
+	  });
+	
+
+	// Скрыть блок с категориями, по клику вне блока
+	let btnCategories = $(".btn-categories, .header__link-home, .header__link-products, .header__link-wordpress, .header__link-features, .header__link-pages"); // указываем кнопку
+	let categories = $(".div-categories, .header__list-home, .header__list-products, .header__list-wordpress, .header__list-features, .header__pages-wrap");
+	$(document).on('click',function (e) { // событие клика по веб-документу
+	if ( ! btnCategories.is(e.target) && btnCategories.has(e.target).length === 0 &&
+		 // если клик был не по нашему блоку
+		 ! categories.is(e.target) && categories.has(e.target).length === 0
+		 // и не по его дочерним элементам
+		   ) {
+	  categories.fadeOut(); // скрываем его
+		}
 	});
 
 	$('#create__search-list').styler();
