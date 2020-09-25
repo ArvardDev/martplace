@@ -175,6 +175,33 @@ h6 {
 	}
 }
 
+.glob {
+	&__title-box {
+		height: 181px;
+		background-color: #441c7c;
+		background-image: linear-gradient(to left, #0d3ef2 0%, #4c1f9c 100%);
+		padding: 56px 0;
+		margin-bottom: 70px;
+	}
+
+	.breadcrumbs {
+		text-align: left;
+
+		&__inner {
+			padding-bottom: 20px;
+			padding-top: 0;
+		}
+	}
+
+	&__title {
+		color: #fff;
+		font-size: 30px;
+		font-weight: 500;
+		line-height: 30px;
+		margin: 0;
+	}
+}
+
 .breadcrumbs {
 	text-align: center;
 
