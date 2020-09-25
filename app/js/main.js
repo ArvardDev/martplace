@@ -1,61 +1,61 @@
 $(function () {
 
-	$('.header__menu-btn').on('click', function(){
+	$('.header__menu-btn').on('click', function () {
 		$('.header__menu-list').slideToggle("slow");
 	});
-	$('.header__profile-btn').on('click', function(){
+	$('.header__profile-btn').on('click', function () {
 		$('.header__profile-box').toggleClass('active');
 	});
 
-	$('.header__link-home').on('click', function(){
+	$('.header__link-home').on('click', function () {
 		$('.header__list-home').slideToggle("slow");
 	});
-	$('.header__link-products').on('click', function(){
+	$('.header__link-products').on('click', function () {
 		$('.header__list-products').slideToggle("slow");
 	});
-	$('.header__link-wordpress').on('click', function(){
+	$('.header__link-wordpress').on('click', function () {
 		$('.header__list-wordpress').slideToggle("slow");
 	});
-	$('.header__link-features').on('click', function(){
+	$('.header__link-features').on('click', function () {
 		$('.header__list-features').slideToggle("slow");
 	});
-	$('.header__link-pages').on('click', function(){
+	$('.header__link-pages').on('click', function () {
 		$('.header__pages-wrap').slideToggle();
 	});
 
-	$(function(){
-		if ( $(window).width() < 900 ) {
-			$('.main-pages__title').on('click', function(){
+	$(function () {
+		if ($(window).width() < 900) {
+			$('.main-pages__title').on('click', function () {
 				$('.main-pages__list').slideToggle();
 			})
 		}
-	  });
-	$(function(){
-		if ( $(window).width() < 900 ) {
-			$('.dashboard__title').on('click', function(){
+	});
+	$(function () {
+		if ($(window).width() < 900) {
+			$('.dashboard__title').on('click', function () {
 				$('.dashboard__list').slideToggle();
 			})
 		}
-	  });
-	$(function(){
-		if ( $(window).width() < 900 ) {
-			$('.other-pages__title').on('click', function(){
+	});
+	$(function () {
+		if ($(window).width() < 900) {
+			$('.other-pages__title').on('click', function () {
 				$('.other-pages__list').slideToggle();
 			})
 		}
-	  });
-	
+	});
+
 
 	// Скрыть блок с категориями, по клику вне блока
-	let btnCategories = $(".btn-categories, .header__link-home, .header__link-products, .header__link-wordpress, .header__link-features, .header__link-pages"); // указываем кнопку
-	let categories = $(".div-categories, .header__list-home, .header__list-products, .header__list-wordpress, .header__list-features, .header__pages-wrap");
-	$(document).on('click',function (e) { // событие клика по веб-документу
-	if ( ! btnCategories.is(e.target) && btnCategories.has(e.target).length === 0 &&
-		 // если клик был не по нашему блоку
-		 ! categories.is(e.target) && categories.has(e.target).length === 0
-		 // и не по его дочерним элементам
-		   ) {
-	  categories.fadeOut(); // скрываем его
+	let btnCategories = $(".header__link-home, .header__link-products, .header__link-wordpress, .header__link-features, .header__link-pages"); // указываем кнопку
+	let categories = $(".header__list-home, .header__list-products, .header__list-wordpress, .header__list-features, .header__pages-wrap");
+	$(document).on('click', function (e) { // событие клика по веб-документу
+		if (!btnCategories.is(e.target) && btnCategories.has(e.target).length === 0 &&
+			// если клик был не по нашему блоку
+			!categories.is(e.target) && categories.has(e.target).length === 0
+			// и не по его дочерним элементам
+		) {
+			categories.fadeOut(); // скрываем его
 		}
 	});
 
@@ -64,32 +64,32 @@ $(function () {
 	$('#products-page__sort-list').styler();
 	$('#products-page__per-page').styler();
 
-	$('#category-aside__title').on('click', function(){
-			$('.category__list').slideToggle();
+	$('#category-aside__title').on('click', function () {
+		$('.category__list').slideToggle();
 	});
-	$('#filter-aside__title').on('click', function(){
-			$('.filter__list').slideToggle();
+	$('#filter-aside__title').on('click', function () {
+		$('.filter__list').slideToggle();
 	});
-	$('#pricing-aside__title').on('click', function(){
-			$('#pricing-aside__range').slideToggle();
+	$('#pricing-aside__title').on('click', function () {
+		$('#pricing-aside__range').slideToggle();
 	});
 
 	$('.js-range-slider').ionRangeSlider({
-        type: "double",
-        min: 0,
-        max: 400,
-        from: 30,
-        to: 300,
-    });
+		type: "double",
+		min: 0,
+		max: 400,
+		from: 30,
+		to: 300,
+	});
 
-	$('.products-page__view-list').on('click', function(){
+	$('.products-page__view-list').on('click', function () {
 		$('.products-page__items').removeClass('grid');
 		$('.products-page__items').addClass('list');
 		$('.products-page__view-list').addClass('active');
 		$('.products-page__view-grid').removeClass('active');
 
 	});
-	$('.products-page__view-grid').on('click', function(){
+	$('.products-page__view-grid').on('click', function () {
 		$('.products-page__items').removeClass('list');
 		$('.products-page__items').addClass('grid');
 		$('.products-page__view-list').removeClass('active');
@@ -127,21 +127,35 @@ $(function () {
 		<path fill="#000000" d="M5 20c-0.128 0-0.256-0.049-0.354-0.146-0.195-0.195-0.195-0.512 0-0.707l8.646-8.646-8.646-8.646c-0.195-0.195-0.195-0.512 0-0.707s0.512-0.195 0.707 0l9 9c0.195 0.195 0.195 0.512 0 0.707l-9 9c-0.098 0.098-0.226 0.146-0.354 0.146z"></path>\
 		</svg></button>'
 	});
-	
+
 	$('.reviews__slider').slick({
 		arrows: false,
 		slidesToShow: 2,
 		autoplay: true,
 	});
+	$('.more-items__inner').slick({
+		arrows: false,
+		slidesToShow: 3,
+		autoplay: true,
+		autoplaySpeed: 2500
+	});
 
-	if($('div').is('mix')){
+	$('.product__tabs .tab').on('click', function(event) {
+		var id = $(this).attr('data-id');
+			$('.product__tabs').find('.tab-item').removeClass('active-tab').hide();
+			$('.product__tabs .tabs').find('.tab').removeClass('active');
+			$(this).addClass('active');
+			$('#'+id).addClass('active-tab').fadeIn();
+			return false;
+		});
+
+	// if ($('div').is('mix')) {
 		var mixer = mixitup('.products__items');
-	};
+	// };
 
 	// Кнопка Наверх
 	function backToTop() {
 		let button = $('.back-to-top__link');
-
 		$(window).on('scroll', () => {
 			if ($(this).scrollTop() >= 500) {
 				button.fadeIn();
@@ -149,7 +163,6 @@ $(function () {
 				button.fadeOut();
 			}
 		});
-
 		button.on('click', (e) => {
 			e.preventDefault();
 			$('html').animate({
@@ -158,6 +171,4 @@ $(function () {
 		})
 	};
 	backToTop();
-
-
 })

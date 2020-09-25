@@ -64,7 +64,7 @@ button {
 	cursor: pointer;
 }
 
-h1,
+// h1,
 h2,
 h3,
 h4,
@@ -176,10 +176,11 @@ h6 {
 }
 
 .breadcrumbs {
+	text-align: center;
+
 	&__inner {
 		font-size: 15px;
 		line-height: 15px;
-		text-align: center;
 		color: #bfcad7;
 		padding: 37px 0 30px;
 	}
@@ -282,29 +283,117 @@ h6 {
 	}
 }
 
+.social {
+
+	&-list {
+		display: flex;
+
+		& li {
+			a {
+				border-radius: 50%;
+				width: 42px;
+				height: 42px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: 0.3s;
+
+				&:hover {
+					img {
+						height: 18px;
+					}
+				}
+			}
+
+			img {
+				height: 15px;
+			}
+		}
+
+		& li+li {
+			margin-left: 13px;
+		}
+	}
+
+	&-facebook {
+		background-color: #395799;
+
+		&:hover {
+			box-shadow: 0 0 20px 0 #395799;
+		}
+	}
+
+	&-twitter {
+		background-color: #19b2f5;
+
+		&:hover {
+			box-shadow: 0 0 20px 0 #19b2f5;
+		}
+	}
+
+	&-googlein {
+		background-color: #f05b44;
+
+		&:hover {
+			box-shadow: 0 0 20px 0 #f05b44;
+		}
+	}
+
+	&-pinterest {
+		background-color: #9c0c1c;
+
+		&:hover {
+			box-shadow: 0 0 20px 0 #9c0c1c;
+		}
+	}
+
+	&-linkedin {
+		background-color: #0da6be;
+
+		&:hover {
+			box-shadow: 0 0 20px 0 #0da6be;
+		}
+	}
+
+	&-dribble {
+		background-color: #ea4c89;
+
+		&:hover {
+			box-shadow: 0 0 20px 0 #ea4c89;
+		}
+	}
+}
+
 form {
 	margin: 0;
 	padding: 0;
 }
 
+ol,
 ul,
 li {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-
+.globbtn-box {
+	display: flex;
+	justify-content: center;
+}
 .globbtn {
 	width: 190px;
 	height: 55px;
 	text-align: center;
-	padding: 16px;
+	padding: 0 10px;
 	margin: 0 15px;
 	color: #ffffff;
 	background-color: transparent;
 	border-radius: 28px;
 	transition: 0.3s;
 	border: 1px solid #ffffff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 	&:hover {
 		background-color: #ffffff;
@@ -315,18 +404,74 @@ li {
 .globbtn--white {
 	background-color: #ffffff;
 	color: $btn;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 
 	&:hover {
-		background-color: transparent;
+		border-color: $btn;
+		background-color: $btn;
 		color: #ffffff;
 	}
 }
 
 .globbtn--blue {
-	border: 1px solid #ffffff;
+	border-color: $btn;
 	background-color: $btn;
 
 	&:hover {
 		border-color: $btn;
 	}
 }
+
+.category-psd {
+	.products__item-category {
+		
+		&::before {
+			content: '';
+			position: absolute;
+			width: 13px;
+			height: 17px;
+			background-image: url(../images/icons/psd.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			left: 0;
+			top: 1px;
+		}
+	}
+}
+.category-html {
+	.products__item-category {
+		
+		&::before {
+			content: '';
+			position: absolute;
+			width: 15px;
+			height: 17px;
+			background-image: url(../images/icons/html5.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			left: 0;
+			top: 1px;
+		}
+	}
+}
+.category-joomla {
+	.products__item-category {
+		
+		&::before {
+			content: '';
+			position: absolute;
+			width: 15px;
+			height: 17px;
+			background-image: url(../images/icons/joomla.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			left: 0;
+			top: 1px;
+		}
+	}
+}
+
+
