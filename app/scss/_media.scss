@@ -354,6 +354,15 @@
 			justify-content: flex-start;
 		}
 	}
+
+	.recover {
+		&__top {
+			padding: 50px 24px 20px;
+		}
+		&__form {
+			padding: 35px 25px 40px;
+		}
+	}
 }
 
 @media (max-width: 420px) {
@@ -408,6 +417,26 @@
 		}
 		&__text {
 			font-size: 24px;
+		}
+	}
+	
+	.register {
+		&__top {
+			padding-left: 25px;
+			padding-right: 25px;
+			&-title {
+				font-size: 24px;
+			}
+			&-text {
+				font-size: 15px;
+			}
+		}
+		&__form {
+			padding: 25px;
+		}
+		&__link-box {
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 	}
 }

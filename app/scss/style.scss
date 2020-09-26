@@ -2714,54 +2714,58 @@
 		width: 100%;
 	}
 
-	.jq-selectbox__select {
-		background: none;
-		width: 220px;
-		height: 44px;
-		border-radius: 3px;
-		border: 1px solid #eceff2;
-		font: 14px 'Quicksand';
-		font-size: 14px;
-		color: #747b86;
-		padding: 11px 40px 10px 20px;
-		box-shadow: none;
-	}
-
-	.jq-selectbox li {
-		min-height: 18px;
-		padding: 5px 10px 6px;
-		// color: #231F20;
-		height: 44px;
-		font: 14px 'Quicksand';
-		font-size: 14px;
-		// color: #747b86;
-		padding: 11px 40px 10px 20px;
-
-		&+li {
-			border-top: 1px solid #ececec;
+	.jq-selectbox {
+		z-index: 0;
+	
+		&__select {
+			background: none;
+			width: 220px;
+			height: 44px;
+			border-radius: 3px;
+			border: 1px solid #eceff2;
+			font: 14px 'Quicksand';
+			font-size: 14px;
+			color: #747b86;
+			padding: 11px 40px 10px 20px;
+			box-shadow: none;
 		}
 
-		&:hover {
-			background-color: $btn;
+		& li {
+			min-height: 18px;
+			padding: 5px 10px 6px;
+			// color: #231F20;
+			height: 44px;
+			font: 14px 'Quicksand';
+			font-size: 14px;
+			// color: #747b86;
+			padding: 11px 40px 10px 20px;
+
+			&+li {
+				border-top: 1px solid #ececec;
+			}
+
+			&:hover {
+				background-color: $btn;
+			}
 		}
-	}
 
-	.jq-selectbox__trigger {
-		border: none;
-		font-family: 'Linearicons-Free';
+		&__trigger {
+			border: none;
+			font-family: 'Linearicons-Free';
 
-		&::before {
-			content: '\e874';
-			position: absolute;
-			width: 11px;
-			height: 6px;
-			top: 11px;
-			right: 19px;
+			&::before {
+				content: '\e874';
+				position: absolute;
+				width: 11px;
+				height: 6px;
+				top: 11px;
+				right: 19px;
+			}
 		}
-	}
 
-	.jq-selectbox__trigger-arrow {
-		display: none;
+		&__trigger-arrow {
+			display: none;
+		}
 	}
 
 	&__view {
@@ -3934,7 +3938,8 @@
 
 // start login
 
-.login {
+.login,
+.register {
 	&__inner {
 		background-color: #eff1f5;
 		padding: 80px 0 120px;
@@ -4059,6 +4064,78 @@
 }
 
 // end login
+
+// start register
+
+.register {
+	&__top-text {
+		line-height: 28px;
+	}
+	&__btn {
+		margin: 0;
+		height: 55px;
+	}
+	&__links {
+	color: #898f96;
+	}
+}
+
+// end register
+
+// start recover
+
+.recover {
+	
+	&__inner {
+		background-color: #eff1f5;
+		padding: 70px 0 120px;
+	}
+
+	&__box {
+		max-width: 555px;
+		margin: 0 auto;
+		box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+		border-radius: 4px;
+		background-color: #ffffff;
+		color: #000000;
+	}
+	&__top {
+		padding: 50px 44px 20px;
+		border-bottom: 1px solid $greyborder;
+
+		&-text {
+			line-height: 30px;
+			padding: 4px;
+		}
+	}
+	&__form {
+		padding: 35px 50px 60px;
+		max-width: 555px;
+		p {
+			font-weight: 500;
+			line-height: 20px;
+			margin-bottom: 12px;
+		}
+		&-input {
+			background-color: #f4f5f8;
+			width: 100%;
+			height: 50px;
+			margin-bottom: 26px;
+			border: none;
+			padding: 20px 15px;
+
+			&::placeholder {
+				color: #898f96;
+			}
+		}
+	}
+	&__btn {
+		margin: 0;
+		height: 50px;
+	}
+}
+
+// end recover
 
 
 @import 'media';
