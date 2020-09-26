@@ -169,6 +169,10 @@
 		max-width: 100%;
 	}
 
+	.terms__item-text {
+		padding-right: 30px;
+	}
+
 }
 
 @media (max-width: 680px) {
@@ -235,6 +239,20 @@
 		&__link-box {
 			padding: 5px 25px 30px;
 		}
+	}
+
+	.terms {
+		
+		&__item-title {
+			padding-right: 15px;
+			padding-left: 15px;
+			font-size: 20px;
+		}	
+		&__item-text {
+			padding-right: 15px;
+			padding-left: 15px;
+			font-size: 15px;
+		}	
 	}
 }
 

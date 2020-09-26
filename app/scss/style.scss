@@ -4137,5 +4137,35 @@
 
 // end recover
 
+// start terms
+
+.terms {
+	&__inner {
+		padding: 60px 0 120px;
+		background-color: #eff1f5;
+	}
+	&__content {
+		background-color: #fff;
+		padding-bottom: 65px;
+		border-radius: 4px;
+		box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+	}
+	&__item {
+		&-title {
+			padding: 34px 30px 24px;
+			color: #000000;
+			font-size: 24px;
+			line-height: 28px;
+			border-bottom: 1px solid #e8ebf0;
+		}
+		&-text {
+			padding: 22px 40px 22px 31px;
+			line-height: 30px;
+		}
+	}
+}
+
+// end terms
+
 
 @import 'media';
