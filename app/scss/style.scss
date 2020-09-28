@@ -1177,8 +1177,12 @@
 		}
 
 		&-title {
+			font-size: 24px;
+			line-height: 24px;
+			font-weight: 700;
 			text-align: center;
-			margin-bottom: 25px;
+			margin: 0 0 25px;
+			color: #000000;
 		}
 
 		&-text {
@@ -1193,6 +1197,14 @@
 
 .featured {
 	background-color: #eff1f5;
+
+	&__title{
+		color: #000000;
+		font-size: 30px;
+		line-height: 30px;
+		font-weight: 500;
+		margin: 0;
+	}
 
 	&__slider {
 		.slick-btn {
@@ -1302,8 +1314,10 @@
 	}
 
 	&__item-title {
+		font-size: 24px;
+		line-height: 24px;
 		font-weight: 500;
-		margin-bottom: 10px;
+		margin: 0 0 10px;
 	}
 
 	&__link {
@@ -1491,6 +1505,14 @@
 		align-items: center;
 	}
 
+	&__title {
+		color: #000000;
+		font-size: 30px;
+		line-height: 30px;
+		font-weight: 500;
+		margin: 0;
+	}
+
 	&__filter {
 		.jq-selectbox__select {
 			font-family: 'Quicksand';
@@ -1656,7 +1678,8 @@
 	}
 
 	&__item-title {
-		margin-bottom: 10px;
+		font-weight: 700;
+		margin: 0 0 10px;
 	}
 
 	&__item-box {
@@ -1806,6 +1829,14 @@
 
 .followers {
 	background-color: #eff1f5;
+
+	&__title{
+		color: #000000;
+		font-weight: 500;
+		font-size: 30px;
+		line-height: 30px;
+		margin: 0;
+	}
 
 	&__slider {
 		.slick-btn {
@@ -1967,6 +1998,12 @@
 .choose {
 	padding: 100px 0 120px;
 	text-align: center;
+
+	&__title {
+		color: #000000;
+		font-size: 36px;
+		line-height: 36px;
+	}
 
 	&__text {
 		max-width: 680px;
@@ -2149,6 +2186,8 @@
 
 		&-title {
 			color: #ffffff;
+			font-size: 36px;
+			line-height: 36px;
 			margin-bottom: 25px;
 		}
 
@@ -2168,6 +2207,12 @@
 .reviews {
 	&__inner {
 		text-align: center;
+	}
+
+	&__title {
+		color: #000000;
+		font-size: 36px;
+		line-height: 36px;
 	}
 
 	&__text {
@@ -2265,6 +2310,11 @@
 
 	&__top {
 		text-align: center;
+	}
+	&__title{
+		color: #000000;
+		font-size: 36px;
+		line-height: 36px;
 	}
 
 	&__text {
@@ -2482,7 +2532,11 @@
 	}
 
 	&__title {
+		color: #000000;
+		font-size: 24px;
+		line-height: 24px;
 		font-weight: 400;
+		margin: 0;
 
 		&-link {
 			color: $btn;
