@@ -147,30 +147,49 @@
 		}
 	}
 
-	.footer__top {
-		padding: 80px 0;
-	}
+	.footer {
+		&__top {
+			padding: 80px 0;
+		}
 
-	.footer__col-info {
-		margin-bottom: 30px;
-		min-width: 100%;
-	}
+		&__col-info {
+			margin-bottom: 30px;
+			min-width: 100%;
+		}
 
-	.footer__col-links {
-		margin-bottom: 30px;
-		min-width: 50%;
-	}
+		&__col-links {
+			margin-bottom: 30px;
+			min-width: 50%;
+		}
 
-	.footer__col-subscribe {
-		max-width: 100%;
-	}
+		&__col-subscribe {
+			max-width: 100%;
+		}
 
-	.footer__input {
-		max-width: 100%;
+		&__input {
+			max-width: 100%;
+		}
+
 	}
 
 	.terms__item-text {
 		padding-right: 30px;
+	}
+
+	.contact {
+		&__items {
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		&__input {
+			max-width: 750px;
+			width: 100%;
+			margin: 0 15px 15px;
+		}
+		&__form-textarea {
+			margin-left: 15px;
+			margin-right: 15px;
+		}
 	}
 
 }
@@ -236,23 +255,31 @@
 		&__form {
 			padding: 25px;
 		}
+
 		&__link-box {
 			padding: 5px 25px 30px;
 		}
 	}
 
 	.terms {
-		
+
 		&__item-title {
 			padding-right: 15px;
 			padding-left: 15px;
 			font-size: 20px;
-		}	
+		}
+
 		&__item-text {
 			padding-right: 15px;
 			padding-left: 15px;
 			font-size: 15px;
-		}	
+		}
+	}
+
+	.contact {
+		&__inner {
+			padding: 60px 0;
+		}
 	}
 }
 
@@ -352,6 +379,7 @@
 			top: 191px;
 		}
 	}
+
 	.create {
 
 		&__title {
@@ -359,6 +387,7 @@
 			line-height: 60px;
 		}
 	}
+
 	.join-us {
 
 		&__title {
@@ -377,6 +406,7 @@
 		&__top {
 			padding: 50px 24px 20px;
 		}
+
 		&__form {
 			padding: 35px 25px 40px;
 		}
@@ -397,7 +427,7 @@
 			}
 		}
 	}
-	
+
 	.create {
 		padding: 40px 0 0;
 
@@ -406,6 +436,7 @@
 			line-height: 58px;
 			margin-bottom: 20px;
 		}
+
 		&__text {
 			font-size: 16px;
 			margin-bottom: 35px;
@@ -433,25 +464,30 @@
 				height: auto;
 			}
 		}
+
 		&__text {
 			font-size: 24px;
 		}
 	}
-	
+
 	.register {
 		&__top {
 			padding-left: 25px;
 			padding-right: 25px;
+
 			&-title {
 				font-size: 24px;
 			}
+
 			&-text {
 				font-size: 15px;
 			}
 		}
+
 		&__form {
 			padding: 25px;
 		}
+
 		&__link-box {
 			padding-left: 30px;
 			padding-right: 30px;

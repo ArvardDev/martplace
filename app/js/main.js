@@ -149,6 +149,7 @@ $(function () {
 			return false;
 		});
 
+
 	// if ($('div').is('mix')) {
 		var mixer = mixitup('.products__items');
 	// };
