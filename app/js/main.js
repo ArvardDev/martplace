@@ -150,9 +150,9 @@ $(function () {
 		});
 
 
-	// if ($('div').is('mix')) {
+	if($('div').is('mix')){
 		var mixer = mixitup('.products__items');
-	// };
+	};
 
 	// Кнопка Наверх
 	function backToTop() {

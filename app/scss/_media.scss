@@ -57,6 +57,23 @@
 
 }
 
+@media (max-width: 1000px) {
+	
+	.pricing-plan {
+		&__items {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__item{
+			margin-left: auto;
+			margin-right: auto;
+			&+& {
+				margin-left: auto;
+			}
+		}
+	}
+}
+
 @media (max-width: 900px) {
 	.header {
 		&__menu-list {
@@ -409,6 +426,19 @@
 
 		&__form {
 			padding: 35px 25px 40px;
+		}
+	}
+
+	.pricing-plan {
+
+		&__content{
+			padding: 60px 0;
+		}
+		&__content-titlebox {
+			margin-bottom: 32px;
+		}
+		&__item{
+			padding: 0 15px 15px;
 		}
 	}
 }
