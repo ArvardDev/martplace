@@ -147,7 +147,13 @@
 			padding: 20px;
 		}
 	}
-
+	
+	.how-it-works {
+		&__item-inner{
+			flex-direction: column;
+			align-items: center;
+		}
+	}
 }
 
 @media (max-width: 800px) {
@@ -441,6 +447,28 @@
 			padding: 0 15px 15px;
 		}
 	}
+
+	.how-it-works {
+		&__title-box{
+			min-height: 230px;
+			padding-top: 25px;
+		}
+		&__title {
+			margin-bottom: 50px;
+			font-size: 26px;
+		}
+		&__item{
+			padding: 50px 0;
+		}
+		&__item-img {
+			max-width: 100%;
+			min-width: 100%;
+			margin: 0;
+		}
+		&__item-title{
+			font-size: 26px;
+		}
+	}
 }
 
 @media (max-width: 420px) {
@@ -521,6 +549,12 @@
 		&__link-box {
 			padding-left: 30px;
 			padding-right: 30px;
+		}
+	}
+	
+	.how-it-works {
+		&__title {
+			margin-bottom: 30px;
 		}
 	}
 }
