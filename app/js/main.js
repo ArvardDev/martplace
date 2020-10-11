@@ -64,14 +64,14 @@ $(function () {
 	$('#products-page__sort-list').styler();
 	$('#products-page__per-page').styler();
 
-	$('#category-aside__title').on('click', function () {
-		$('.category__list').slideToggle();
+	$('.category-aside__title').on('click', function () {
+		$(this).next('.category__list').slideToggle();
 	});
-	$('#filter-aside__title').on('click', function () {
-		$('.filter__list').slideToggle();
+	$('.filter-aside__title').on('click', function () {
+		$(this).next('.filter__list').slideToggle();
 	});
-	$('#pricing-aside__title').on('click', function () {
-		$('#pricing-aside__range').slideToggle();
+	$('.pricing-aside__title').on('click', function () {
+		$(this).next('#pricing-aside__range').slideToggle();
 	});
 
 	$('.js-range-slider').ionRangeSlider({
