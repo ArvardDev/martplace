@@ -2556,7 +2556,6 @@
 		min-height: 300px;
 		width: 50%;
 		text-align: center;
-		border-radius: 0 6px 6px 0;
 
 		&:first-child {
 			border-right: 1px solid #e8eaf3;
@@ -2907,6 +2906,7 @@
 		flex-wrap: wrap;
 
 		.products__item {
+
 			&-cash {
 				display: none;
 			}
@@ -2923,7 +2923,7 @@
 		&.grid {
 			.products__item {
 				max-width: 262px;
-				max-height: 372px;
+				min-height: 372px;
 
 				&-top {
 					border-radius: 4px 4px 0 0;
@@ -3038,7 +3038,8 @@
 			.products__item {
 				width: 100%;
 				min-width: 100%;
-				height: 210px;
+				min-height: 210px;
+				max-height: 210px;
 				display: flex;
 				flex-direction: row;
 
