@@ -141,7 +141,7 @@ button {
 
 .glob {
 	&__title-box {
-		height: 181px;
+		min-height: 181px;
 		background-color: #441c7c;
 		background-image: linear-gradient(to left, #0d3ef2 0%, #4c1f9c 100%);
 		padding: 56px 0;

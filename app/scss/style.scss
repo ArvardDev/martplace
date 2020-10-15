@@ -1260,7 +1260,7 @@
 		position: relative;
 		height: 450px;
 
-		img{
+		img {
 			width: 555px;
 			height: 450px;
 			border-radius: 4px 0 0 4px;
@@ -1269,8 +1269,8 @@
 			display: block;
 			position: relative;
 		}
-		
-		&::before{
+
+		&::before {
 			content: '';
 			position: absolute;
 			left: 0;
@@ -1410,7 +1410,7 @@
 		overflow: hidden;
 	}
 
-	&__item-tags{
+	&__item-tags {
 		max-height: 110px;
 		overflow: hidden;
 	}
@@ -1610,7 +1610,7 @@
 	&__item {
 		max-width: 360px;
 		width: 100%;
-		max-height: 530px;
+		min-height: 530px;
 		flex-basis: calc(33.33% - 30px);
 		margin-left: 30px;
 		border-radius: 6px;
@@ -1639,8 +1639,8 @@
 			display: block;
 			position: relative;
 		}
-		
-		&::before{
+
+		&::before {
 			content: '';
 			position: absolute;
 			left: 0;
@@ -1654,6 +1654,7 @@
 			box-shadow: inset 0px 0 200px 55px rgba(#7347c1, 1);
 			transition: 0.5s;
 		}
+
 		&:hover .products__item-link,
 		&:hover.products__item-top::before {
 			opacity: 1;
@@ -1780,7 +1781,9 @@
 	&__item-text {
 		line-height: 30px;
 		overflow: hidden;
-		max-height: 86px;
+		max-height: 84px;
+		height: 100%;
+		text-overflow: ellipsis;
 	}
 
 	&__item-info {
@@ -1908,10 +1911,12 @@
 		.slick-slide+.slick-slide {
 			margin-left: 30px;
 		}
-		.slick-track{
+
+		.slick-track {
 			margin: 0 15px;
 		}
-		.slick-list{
+
+		.slick-list {
 			margin: 0 -15px;
 		}
 	}
@@ -2931,7 +2936,8 @@
 						height: 100%;
 						object-fit: cover;
 					}
-					&::before{
+
+					&::before {
 						border-radius: 4px 4px 0 0;
 					}
 
@@ -3424,11 +3430,20 @@
 			padding: 30px 30px 40px;
 		}
 
+		&-image {
+			max-width: 750px;
+			width: 100%;
+			max-height: 430px;
+			height: auto;
+		}
+
 		&-img {
-			width: 750px;
-			height: 430px;
+			width: 100%;
+			max-height: 430px;
+			height: auto;
 			border-radius: 4px 4px 0 0;
 			background-color: #868686;
+			object-fit: cover;
 		}
 	}
 
@@ -3615,9 +3630,13 @@
 		}
 	}
 
+	&__details-image {
+		max-width: 690px;
+	}
+
 	&__details-img {
-		width: 690px;
-		height: 1000px;
+		height: auto;
+		width: 100%;
 		background-color: #c2c2c2;
 		object-fit: cover;
 	}
@@ -3731,6 +3750,7 @@
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
+			align-items: center;
 			text-align: center;
 			background-color: #fff;
 			box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
@@ -3748,14 +3768,14 @@
 		&__buy-addtocart {
 			background-color: $link;
 			position: relative;
-			padding-left: 31px;
 			margin: 30px 0 40px;
 
 			&::before {
 				content: '\e82e';
 				position: absolute;
-				top: 16px;
-				left: 70px;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 25%;
 				font-family: 'Linearicons-Free';
 			}
 
@@ -3853,7 +3873,7 @@
 			}
 
 			&-list {
-				max-width: 300px;
+				max-width: 100%;
 				width: 100%;
 
 				li {
@@ -3883,7 +3903,8 @@
 
 			&-value {
 				display: inline-block;
-				width: 160px;
+				max-width: 160px;
+				width: 100%;
 				margin-left: auto;
 				padding-left: 10px;
 				font-weight: 400;
@@ -3894,6 +3915,8 @@
 			background-color: #fff;
 			padding: 0 30px 40px;
 			text-align: center;
+			box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+			border-radius: 4px;
 
 			&-title {
 				margin-bottom: 20px;
@@ -3943,7 +3966,7 @@
 				font-size: 15px;
 
 				a {
-					margin: 0;
+					margin: 0 5px;
 					width: 140px;
 					height: 44px;
 				}
@@ -3987,15 +4010,17 @@
 	}
 
 	.slick-list {
-		margin: 0 -14px;
+		margin: 0 -15px;
 	}
 
 	.slick-track {
-		margin: 0 14px;
+		margin: 0 15px;
 	}
 
 	.products__item {
 		margin-top: 30px;
+		margin-left: 0;
+		min-height: 530px;
 	}
 }
 
@@ -4863,7 +4888,7 @@
 .favorites .products-page {
 	background-color: #eff1f5;
 
-	&__content{
+	&__content {
 		margin: 0;
 		padding: 30px 0 60px;
 	}
@@ -5377,13 +5402,16 @@
 // start how-it-works
 
 .how-it-works {
+
 	&__title-box,
 	.breadcrumbs {
 		text-align: center;
 	}
-	&__title-box{
+
+	&__title-box {
 		min-height: 280px;
 	}
+
 	&__title {
 		margin-bottom: 50px;
 		line-height: 50px;
@@ -5398,13 +5426,16 @@
 		background-color: #fff;
 		padding: 100px 0;
 	}
+
 	&__upload {
 		background-color: #eff1f5;
 	}
-	&__item-inner{
+
+	&__item-inner {
 		display: flex;
 		justify-content: space-between;
 	}
+
 	&__item-img {
 		display: block;
 		max-width: 458px;
@@ -5413,20 +5444,24 @@
 		margin-right: 15px;
 		object-fit: contain;
 	}
+
 	&__item-box {
 		max-width: 458px;
 		padding: 22px 0 30px;
 		margin-left: 15px;
 	}
+
 	&__item-title {
 		color: #000000;
 		font-size: 30px;
 		margin: 0 0 30px;
 	}
+
 	&__item-text {
 		line-height: 30px;
 		margin-bottom: 24px;
 	}
+
 	&__item-btn {
 		width: 170px;
 		height: 50px;

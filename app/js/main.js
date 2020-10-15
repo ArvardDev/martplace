@@ -182,8 +182,41 @@ $(function () {
 	$('.more-items__inner').slick({
 		arrows: false,
 		slidesToShow: 3,
-		autoplay: true,
-		autoplaySpeed: 2500
+		// autoplay: true,
+		// autoplaySpeed: 2500,
+		
+		responsive: [{
+			breakpoint: 1200,
+			settings: {
+				autoplay: false,
+			}
+		},
+		{
+			breakpoint: 1100,
+			settings: {
+				slidesToShow: 2,
+				autoplay: false,
+			}
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				autoplay: false,
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		},
+		{
+			breakpoint: 520,
+			settings: {
+				autoplay: true,
+				autoplaySpeed: 3000,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false
+			}
+		}
+	]
 	});
 
 	$('.product__tabs .tab').on('click', function (event) {
